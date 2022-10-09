@@ -1,9 +1,9 @@
-import React from 'react'
+import React from 'react';
 import '../styles/App.css';
 import { useState, useEffect } from 'react';
 const App = () => {
 const[name,setName]=useState(' ');
- const[id,setId]=useState(1)
+ const[id,setId]=useState(' ');
  useEffect(()=>{fetch('https://content.newtonschool.co/v1/pr/main/users/${id}')
  .then((resp)=>resp.json()).then((data)=>{console.log(data.name);
                                           setName(data.name)
